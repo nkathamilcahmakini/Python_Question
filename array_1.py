@@ -4,13 +4,14 @@
 def count_elements(arr):
     element_count = {}
     for item in arr:
+        if (item, str):
+            item = item.lower() 
         if item in element_count:
             element_count[item] += 1
         else:
             element_count[item] = 1
     return element_count
 
-array = ['S', 'a', 'c', 'e', 4, 2, 1, 'e', 4, 2, 1]
+array = ['S', 's', 'a', 'c', 'e', 4, 2, 1, 'e', 4, 2, 1]
 result = count_elements(array)
-print(result)       
-
+print(result)
